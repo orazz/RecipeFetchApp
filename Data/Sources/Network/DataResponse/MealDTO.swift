@@ -7,9 +7,7 @@
 
 import Foundation
 
-public struct Meals: Decodable {
-    public let meals: [MealDTO]
-}
+
 
 public struct MealDTO: Decodable {
     public let idMeal: String

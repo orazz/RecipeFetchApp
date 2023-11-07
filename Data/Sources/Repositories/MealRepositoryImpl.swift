@@ -12,18 +12,15 @@ import Network
 public class MealRepositoryImpl: MealRepository {
     
     private var api: Api
-    private var mapper: MealMapper
     
     public init(api: Api) {
         self.api = api
-        self.mapper = .init()
     }
     
     public func fetchMealList() async throws -> [Domain.Meal] {
         let mealDtoList = try await api.callApi(route: .mealList(params: ["c":"Dessert"]), decodeType: Meals.self)
         
-        let mealList = mapper.mapDtoConvertToEntities(input: mealDtoList.meals)
-        return mealList.sorted { meal1, meal2 in
+        return mealDtoList.meals.sorted { meal1, meal2 in
             meal1.strMeal < meal2.strMeal
         }
     }
