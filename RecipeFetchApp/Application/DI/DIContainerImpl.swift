@@ -14,7 +14,7 @@ import Local
 final class DIContainerImpl: DIContainer {
     
     private var api: Api = ApiImpl()
-    private var localStorage: LocalStorage = LocalStorageImpl()
+    private var imageCache: ImageCache = ImageCacheImpl()
 
     private func createMealRepository() -> MealRepository {
         let mealRepository = MealRepositoryImpl(api: self.api)
@@ -22,7 +22,7 @@ final class DIContainerImpl: DIContainer {
     }
     
     private func createImageRepository() -> ImageRepository {
-        let imageRepository = ImageRepositoryImpl(api: self.api, localStorage: self.localStorage)
+        let imageRepository = ImageRepositoryImpl(api: self.api, imageCache: self.imageCache)
         return imageRepository
     }
     

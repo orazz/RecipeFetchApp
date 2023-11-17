@@ -50,17 +50,15 @@ public class MealUseCaseImpl: MealUseCase {
     public func fetchImage(withImageUrl imageUrl: String) -> AnyPublisher<Image, DomainError> {
         Future { promise in
             Task {
-                var uiImage: UIImage
-                do {
-                    uiImage = try await self.imageRepository.fetchImageFromLocal(imageUrl: imageUrl)
-                } catch {
+                var uiImage: UIImage? = self.imageRepository.fetchImageFromLocal(imageUrl: imageUrl)
+                if (uiImage == nil) {
                     guard let imageFromServer = try? await self.imageRepository.fetchImageFromServer(imageUrl: imageUrl) else {
                         throw DomainError.cannotLoadImage
                     }
                     uiImage = imageFromServer
-                    try? await self.imageRepository.saveImageToDisk(imageUrl: imageUrl, image: uiImage)
+                    self.imageRepository.saveImageToCache(imageUrl: imageUrl, image: uiImage!)
                 }
-                let image = Image(uiImage: uiImage)
+                let image = Image(uiImage: uiImage!)
                 promise(.success(image))
             }
         }

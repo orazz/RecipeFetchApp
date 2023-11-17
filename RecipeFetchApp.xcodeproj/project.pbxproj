@@ -14,7 +14,7 @@
 		8E5E59CA2AF5D04A00111936 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E5E59C92AF5D04A00111936 /* Preview Assets.xcassets */; };
 		8E5E59DA2AF5E79000111936 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5E59D92AF5E79000111936 /* MainView.swift */; };
 		8E5E59DC2AF5E7DF00111936 /* MealItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5E59DB2AF5E7DF00111936 /* MealItemView.swift */; };
-		8E5E59DE2AF5EA4F00111936 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5E59DD2AF5EA4F00111936 /* AsyncImageView.swift */; };
+		8E5E59DE2AF5EA4F00111936 /* AppImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5E59DD2AF5EA4F00111936 /* AppImageView.swift */; };
 		8E5E59E22AF6946500111936 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5E59E12AF6946500111936 /* AppDelegate.swift */; };
 		8E5E59E42AF695C500111936 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5E59E32AF695C500111936 /* DIContainer.swift */; };
 		8E5E59E62AF695DC00111936 /* DIContainerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5E59E52AF695DC00111936 /* DIContainerImpl.swift */; };
@@ -29,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E0FEDC42B01C54D00ABE54E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8E56B13A2AF74BE0004B5D80 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = Domain/Package.swift; sourceTree = "<group>"; };
 		8E5E59BF2AF5D04800111936 /* RecipeFetchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeFetchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E5E59C22AF5D04800111936 /* RecipeFetchAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeFetchAppApp.swift; sourceTree = "<group>"; };
@@ -36,7 +37,7 @@
 		8E5E59C92AF5D04A00111936 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8E5E59D92AF5E79000111936 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		8E5E59DB2AF5E7DF00111936 /* MealItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealItemView.swift; sourceTree = "<group>"; };
-		8E5E59DD2AF5EA4F00111936 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
+		8E5E59DD2AF5EA4F00111936 /* AppImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImageView.swift; sourceTree = "<group>"; };
 		8E5E59E12AF6946500111936 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E5E59E32AF695C500111936 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		8E5E59E52AF695DC00111936 /* DIContainerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainerImpl.swift; sourceTree = "<group>"; };
@@ -79,6 +80,7 @@
 				8E5E59FA2AF6A04700111936 /* Data */,
 				8E5E59EB2AF6972900111936 /* Domain */,
 				8E5E59C12AF5D04800111936 /* RecipeFetchApp */,
+				8E0FEDC42B01C54D00ABE54E /* README.md */,
 				8E5E59C02AF5D04800111936 /* Products */,
 				8E56B1392AF74BCF004B5D80 /* Frameworks */,
 			);
@@ -174,7 +176,7 @@
 			children = (
 				8E5E59D92AF5E79000111936 /* MainView.swift */,
 				8E5E59DB2AF5E7DF00111936 /* MealItemView.swift */,
-				8E5E59DD2AF5EA4F00111936 /* AsyncImageView.swift */,
+				8E5E59DD2AF5EA4F00111936 /* AppImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -310,7 +312,7 @@
 				8E5E59E22AF6946500111936 /* AppDelegate.swift in Sources */,
 				8E5E59EE2AF69BE000111936 /* ViewModelFactory.swift in Sources */,
 				8E5E59C32AF5D04800111936 /* RecipeFetchAppApp.swift in Sources */,
-				8E5E59DE2AF5EA4F00111936 /* AsyncImageView.swift in Sources */,
+				8E5E59DE2AF5EA4F00111936 /* AppImageView.swift in Sources */,
 				8E6A09972AF99BD0008459D2 /* MealDetailViewModel.swift in Sources */,
 				8E6A09902AF76C3E008459D2 /* Extensions.swift in Sources */,
 			);

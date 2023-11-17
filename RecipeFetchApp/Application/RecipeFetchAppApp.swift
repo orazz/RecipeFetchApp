@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct RecipeFetchAppApp: App {
+    // manage app delegate class
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     var body: some Scene {

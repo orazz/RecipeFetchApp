@@ -1,7 +1,7 @@
 # Recipe Fetch App
 
 ### Description
-This application utilizes the MVVM (Model-View-ViewModel) pattern alongside the Clean Architecture. It is structured into three separate modules: Data and Domain. These modules are organized within a Monorepo setup, managed through Swift Package Manager, and all reside under a single package.
+This application utilizes the MVVM (Model-View-ViewModel) pattern alongside the Clean Architecture. It is structured into two separate modules: Data and Domain. These modules are organized within a Monorepo setup, managed through Swift Package Manager, and all reside under a single package.
 
 ### Stack
 

@@ -10,7 +10,6 @@ import UIKit
 
 public protocol ImageRepository {
     func fetchImageFromServer(imageUrl url: String) async throws -> UIImage
-    func fetchImageFromLocal(imageUrl url: String) async throws -> UIImage
-    func saveImageToDisk(imageUrl url: String, image: UIImage) async throws
-    func resetCache()
+    func fetchImageFromLocal(imageUrl url: String) -> UIImage?
+    func saveImageToCache(imageUrl url: String, image: UIImage)
 }

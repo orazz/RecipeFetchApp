@@ -41,7 +41,6 @@ struct MainView: View {
                     }
                 }
             }
-            
             .navigationBarTitle(Text("Dessert"), displayMode: .inline)
             .onAppear {
                 viewModel.fetchMealList()

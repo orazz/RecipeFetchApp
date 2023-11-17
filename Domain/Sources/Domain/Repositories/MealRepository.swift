@@ -8,7 +8,6 @@
 import Foundation
 
 public protocol MealRepository {
-    
     func fetchMealList() async throws -> [Meal]
     func fetchMealDetail(idMeal: String) async throws -> MealDetail
 }

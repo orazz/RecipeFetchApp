@@ -15,11 +15,11 @@ import Local
 public class ImageRepositoryImpl: ImageRepository {
     
     private var api: Api
-    private var localStorage: LocalStorage
+    private var imageCache: ImageCache
     
-    public init(api: Api, localStorage: LocalStorage) {
+    public init(api: Api, imageCache: ImageCache) {
         self.api = api
-        self.localStorage = localStorage
+        self.imageCache = imageCache
     }
     
     public func fetchImageFromServer(imageUrl url: String) async throws -> UIImage {
@@ -30,15 +30,11 @@ public class ImageRepositoryImpl: ImageRepository {
         return image
     }
     
-    public func fetchImageFromLocal(imageUrl url: String) async throws -> UIImage {
-        return try await self.localStorage.fetchImage(imageUrl: url)
+    public func fetchImageFromLocal(imageUrl url: String) -> UIImage? {
+        return self.imageCache.fetchImage(imageUrl: url)
     }
     
-    public func saveImageToDisk(imageUrl url: String, image: UIImage) async throws {
-        try await self.localStorage.saveImageToDisk(imageUrl: url, image: image)
-    }
-    
-    public func resetCache() {
-        localStorage.resetCache()
+    public func saveImageToCache(imageUrl url: String, image: UIImage)  {
+        self.imageCache.saveImageToCache(imageUrl: url, image: image)
     }
 }
