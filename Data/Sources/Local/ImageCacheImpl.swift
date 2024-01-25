@@ -9,18 +9,18 @@ import UIKit
 
 final public class ImageCacheImpl: ImageCache {
 
-    private var cache = [String: UIImage]()
+    private var imageCache = NSCache<NSString, UIImage>()
 
     public init() {}
 
     public func fetchImage(imageUrl urlStr: String) -> UIImage? {
-        if let cachedImage = self.cache[urlStr] {
+        if let cachedImage = self.imageCache.object(forKey: NSString(string: urlStr)) {
             return cachedImage
         }
         return nil
     }
     
     public func saveImageToCache(imageUrl urlStr: String, image: UIImage) {
-        self.cache[urlStr] = image
+        self.imageCache.setObject(image, forKey: NSString(string: urlStr))
     }
 }
